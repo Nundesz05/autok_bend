@@ -8,7 +8,7 @@ try {
     fs.readFile("autok.csv","utf-8",(error,data) => {
         if(error) console.log(error);
         else {
-            let sorok = data.split("\r\n");
+            let sorok = data.split("\n");
             for(let sor of sorok) {
                 let s = sor.split(";");
                 autok.push({id:s[0]*1, tipus:s[1], suly:s[2]*1,loero:s[3]*1});
